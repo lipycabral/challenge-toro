@@ -7,10 +7,15 @@ export const Nav = styled.nav`
   padding: ${({ theme }) => theme.padding};
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   background: ${({ theme }) => theme.palette.primary};
   position: relative;
+`;
+
+export const Container = styled.div`
+  max-width: 1140px;
+  width: 100%;
 `;
 
 export const Logo = styled.img.attrs({ src: logo })`
@@ -27,6 +32,9 @@ export const Body = styled.section`
 `;
 
 export const Routes = styled.section`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   padding: ${({ theme }) => theme.padding};
   flex: 1;
   width: 100%;

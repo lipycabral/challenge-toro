@@ -6,14 +6,23 @@ import { ThemeProvider } from "styled-components";
 import { defaultTheme } from "./theme";
 import "./index.css";
 
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import { persistor, store } from "@/store/index";
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={defaultTheme}>
-      <App />
-    </ThemeProvider>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <ThemeProvider theme={defaultTheme}>
+          <App />
+        </ThemeProvider>
+      </PersistGate>
+    </Provider>
   </React.StrictMode>
 );
 

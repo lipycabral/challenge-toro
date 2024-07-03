@@ -15,16 +15,20 @@ export default function App() {
     <Router>
       <St.Body>
         <St.Nav>
-          <Link to="/">
-            <St.Logo />
-          </Link>
+          <St.Container>
+            <Link to="/">
+              <St.Logo />
+            </Link>
+          </St.Container>
         </St.Nav>
         <St.Routes>
-          <Routes>
-            <Route path="/" element={<Home />} />
+          <St.Container>
+            <Routes>
+              <Route path="/" element={<Home />} />
 
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+          </St.Container>
         </St.Routes>
       </St.Body>
     </Router>
