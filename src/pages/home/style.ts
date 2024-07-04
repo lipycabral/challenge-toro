@@ -10,6 +10,7 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 `;
 
 export const List = styled.div`
@@ -24,6 +25,21 @@ export const Sort = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+`;
+
+export const Buttons = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const Title = styled.h1`

@@ -71,12 +71,17 @@ const Home = () => {
         <St.Title>Explore o mercado</St.Title>
         <St.Sort>
           <St.Description>Ordenar:</St.Description>
-          <St.Button active={order === "up"} onClick={() => setOrder("up")}>
-            Em Alta
-          </St.Button>
-          <St.Button active={order === "down"} onClick={() => setOrder("down")}>
-            Em Baixa
-          </St.Button>
+          <St.Buttons>
+            <St.Button active={order === "up"} onClick={() => setOrder("up")}>
+              Em Alta
+            </St.Button>
+            <St.Button
+              active={order === "down"}
+              onClick={() => setOrder("down")}
+            >
+              Em Baixa
+            </St.Button>
+          </St.Buttons>
         </St.Sort>
       </St.Header>
       <St.List>{renderInvestiments}</St.List>
