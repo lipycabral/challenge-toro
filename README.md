@@ -1,46 +1,66 @@
-# Getting Started with Create React App
+## Requisitos
+> docker
+> docker-compose
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Para iniciar o projeto
+```
+docker-compose up
+```
 
-## Available Scripts
+## Alterações que houveram no desafio
+> Usei a base do container toroinvest/quotesmock para incluir uma api para buscar os detalhes das ações como longName e logo.
 
-In the project directory, you can run:
+# Desafio Toro Desenvolvedor Front-End
 
-### `npm start`
+Bem-vindo ao desafio de programação Front-End da Toro Investimentos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Problema
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Reproduza um sistema front-end que exiba em tempo real, de forma organizada e agradável, preços de ações recebidas através de uma conexão websocket.
+É preciso exibir pelo menos as 5 ações mais valorizadas e as 5 menos valorizadas em cards contendo o símbolo da ação, o preço atual e um gráfico que ilustre a evolução do preço.
+As cotações devem ser recebidas a partir do nosso simulador de cotações que pode ser acessado usando docker com o seguinte comando: `docker run -p 8080:8080 toroinvest/quotesmock`. O fluxo de cotações está no endpoint `/quotes`.
 
-### `npm test`
+## Layout
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Acesse o layer completo (Desk e Mobile) no Figma [neste link](https://www.figma.com/file/WWD46DsIYNhoipr3WSqFPb/TESTE-TORO-FRONT-END?node-id=0%3A1)
 
-### `npm run build`
+![Layout Desktop](screenshots/desktop.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Requisitos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- O layout produzido deve ser o mais proximo possível do disponibilizado e o styleguide deve ser respeitado
+- Utilizar algum gerencimento de estado (terceiro ou próprio) para armazenar os dados obtidos do websocket
+- Responsividade (versão mobile inclusa no Figma)
+- Os cards não devem piscar (entrar e sair) na tela quando os ativos sofrerem alterações de preço que determine alta ou baixa
+- O projeto deve ser publicado em um repositório público no github.com, bitbucket.org ou gitlab.com
+- Testes automatizados
+- README com instruções de como instalar as dependências do projeto, de como rodar a aplicação e como rodar os testes automatizados
+- Deve ser desenvolvido em Javascript com ou sem Typescript
 
-### `npm run eject`
+### Bônus
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Sistema executável através do docker-compose
+- Usar o CI/CD da plataforma onde hospedar o código
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Critérios de Avaliação
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Os seguintes critérios serão usados para avaliar sua UI:
+- Estilização e hierarquia
+- Proximidade com o layout idealizado
+- Técnicas de renderização e manipulação do DOM
+- Sensibilidade com UI e senso crítico
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Os seguintes critérios serão usados para avaliar o seu código:
+- Lógica para transformação de dados
+- Estrutura do projeto
+- Legibilidade
+- Escopo
+- Organização do código
+- Padrões de projeto
+- Existência e quantidade de bugs e gambiarras
+- Qualidade e cobertura dos testes
+- Documentação
+- Contexto e cadência dos commits
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Dúvidas
