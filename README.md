@@ -1,6 +1,8 @@
 ## Requisitos
-> docker
-> docker-compose
+```
+docker
+docker-compose
+```
 
 ## Para iniciar o projeto
 ```
