@@ -16,6 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "theme.d.ts"],
+  "include": ["src", "theme.d.ts", "types.d.ts"],
   "extends": "./tsconfig.paths.json"
 }

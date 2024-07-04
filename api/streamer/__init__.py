@@ -1,3 +1,4 @@
+import aiohttp_cors
 from aiohttp import web
 
 from quote_generator import SHARE_SYMBOLS, QuoteGenerator, SHARE_COMPANIES
@@ -15,5 +16,17 @@ def create_app():
     app.router.add_static('/assets/', path='assets', name='assets')
 
     app['GENERATOR'] = QuoteGenerator(SHARE_SYMBOLS, seed=1)
+    
+    cors = aiohttp_cors.setup(app, defaults={
+        "*": aiohttp_cors.ResourceOptions(
+            allow_credentials=True,
+            expose_headers="*",
+            allow_headers="*",
+        )
+    })
+
+    # Add CORS to each route
+    for route in list(app.router.routes()):
+        cors.add(route)
 
     return app

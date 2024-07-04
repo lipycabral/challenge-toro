@@ -7,6 +7,10 @@ declare module "styled-components" {
       primary: string;
       white: string;
       grey: string;
+      blueAtoll: string;
+      casper: string;
+      up: string;
+      down: string;
     };
   }
 }

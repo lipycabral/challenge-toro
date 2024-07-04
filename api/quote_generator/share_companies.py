@@ -66,7 +66,7 @@ SHARE_COMPANIES_LOGO = {
     "AZUL4": "AZUL4.svg",
     "GNDI3": "GNDI3.png",
     "ELET6": "ELET6.png",
-    "MRFG3": "MRFG3.png",
+    "MRFG3": "MRFG3.jpg",
     "CSNA3": "CSNA3.png",
     "LREN3": "LREN3.png",
     "IRBR3": "IRBR3.png",
