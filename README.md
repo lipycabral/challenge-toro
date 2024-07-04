@@ -1,8 +1,6 @@
 ## Requisitos
-```
-docker
-docker-compose
-```
+- docker
+- docker-compose
 
 ## Para iniciar o projeto
 ```
@@ -64,5 +62,3 @@ Os seguintes critérios serão usados para avaliar o seu código:
 - Qualidade e cobertura dos testes
 - Documentação
 - Contexto e cadência dos commits
-
-## Dúvidas
